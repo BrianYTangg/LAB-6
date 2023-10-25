@@ -1,4 +1,3 @@
-# Brian Tang
 def encoder(text):
     l = []
     for num in text:
@@ -10,16 +9,6 @@ def encoder(text):
         l.append(num)
     return ''.join(l)
 
-def decoder(text):
-    l = []
-    for num in text:
-        if num.isdigit():
-            num = int(num) - 3
-            if num == 0:
-                num = num+6
-            num = str(num)
-        l.append(num)
-    return ''.join(l)
 
 orig = 0
 after = 0
