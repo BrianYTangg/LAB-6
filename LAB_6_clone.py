@@ -10,6 +10,22 @@ def encoder(text):
     return ''.join(l)
 
 
+# helen's decoder
+def decoder(text):
+    l = []
+    for num in text:
+        if num.isdigit():
+            if num == 2:
+                num = 9
+            elif num == 1:
+                num = 8
+            else:
+                num = int(num) - 3
+
+        l.append(str(num))
+    return ''.join(l)
+
+
 orig = 0
 after = 0
 print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit')
